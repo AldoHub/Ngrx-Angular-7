@@ -1,1 +1,108 @@
-/* You can add global styles to this file, and also import other style files */
+
+body {
+    background: rgb(179, 179, 179);
+    font-family: Poppins;
+   
+}
+
+body * {
+    transition: all 500ms ease-in-out;
+}
+
+.container {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    width: 60%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-top: 4px solid #38fa07;
+    background: rgb(245, 245, 245);
+    position: relative;
+    text-align: center;
+    -webkit-box-shadow: 0px 3px 12px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 12px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 12px -4px rgba(0,0,0,0.75);
+
+}
+
+header {
+    position: relative;
+    z-index: 2;
+    margin-top: 20px;
+}
+
+header h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+    text-transform: uppercase;
+     color: #111;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+  
+}
+.pond{
+    width: 30%;
+    position: absolute;
+    z-index: 0;
+    left: 30%;
+}
+
+form input {
+    border: none;
+    
+}
+
+form input[type="text"]{
+    font-family: poppins;
+    font-size: 2rem;
+    padding-left: 10px;
+}
+
+form input[type="submit"] {
+    background: #38fa07;
+    color: #222;
+    border-radius: 0px 5px 5px 0px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+form input[type="submit"]:disabled {
+    background: #eee;
+    cursor: not-allowed;
+}
+
+i {
+    padding: 10px;
+    display: block;
+    font-size: 2rem;
+    background: #38fa07;
+    color: #222;
+    border-radius: 5px 0px 0px 5px;
+}
+.condition {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin-top: -30px;
+}
+
+.weatherData{
+    margin-top: 10px;
+}
+.weatherData img {
+    width: 200px;
+    margin-bottom: -60px;
+}
+
+@media (max-width: 1000px){
+    .container {
+        width: 100%;
+    }
+    .pond{
+        width: 30%;
+    }
+}

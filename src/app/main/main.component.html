@@ -1,0 +1,22 @@
+
+<form (submit)="fetchWeather(weatherForm.value)" [formGroup]="weatherForm">
+    <span><i class="fas fa-thermometer-quarter"></i></span>
+    <input type="text" name="city" placeholder="Type a city" formControlName="city"/>
+    <input type="submit" [disabled]="!weatherForm.valid"  value="Search" name="submit">
+</form>
+
+<div class="weatherData" *ngIf="weatherData; else showMessage">
+    <img src="{{weatherData.current.condition.icon}}" />
+    <p>{{weatherData.current.condition.text}}</p>
+    <p>Localtime: {{weatherData.location.localtime}}</p>
+    <div class="condition">
+        
+        <h2>{{weatherData.location.name}},</h2>
+        <p>&nbsp; {{weatherData.location.country}}</p>
+    </div>
+    
+</div>
+
+<ng-template #showMessage>
+    <p>There is no data in the state</p>
+</ng-template>
